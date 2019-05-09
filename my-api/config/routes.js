@@ -10,4 +10,6 @@
 
 module.exports.routes = {
     'POST /api/v1/user/create': 'UserController.signup',
+    'POST /api/v1/user/login': 'UserController.login',
+    'GET /api/v1/user/logout': 'UserController.logout',
 };
