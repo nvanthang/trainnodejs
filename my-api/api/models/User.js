@@ -43,6 +43,9 @@ module.exports = {
     role:{
       type:"string",
       required:true
+    },
+    isactive:{
+      type:"boolean"
     }
 
   },

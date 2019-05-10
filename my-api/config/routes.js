@@ -11,5 +11,7 @@
 module.exports.routes = {
     'POST /api/v1/user/create': 'UserController.signup',
     'POST /api/v1/user/login': 'UserController.login',
+    'POST /api/v1/user/active': 'UserController.active',
+    'POST /api/v1/user/resetotp': 'UserController.resetotp',
     'GET /api/v1/user/logout': 'UserController.logout',
 };
