@@ -14,4 +14,8 @@ module.exports.routes = {
     'POST /api/v1/user/active': 'UserController.active',
     'POST /api/v1/user/resetotp': 'UserController.resetotp',
     'GET /api/v1/user/logout': 'UserController.logout',
+    'POST /api/v1/user/rqresetpw': 'UserController.require_resetpw',
+    'POST /api/v1/user/get': 'UserController.findUser',
+    'POST /api/v1/user/delete': 'UserController.delete',
+    'POST /api/v1/user/changepw': 'UserController.changepw',
 };

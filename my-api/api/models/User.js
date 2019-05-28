@@ -42,7 +42,6 @@ module.exports = {
     
     role:{
       type:"string",
-      required:true
     },
     isactive:{
       type:"boolean"
@@ -67,6 +66,20 @@ module.exports = {
       });
     });
   },
+  beforeUpdate:function (values, next) {
+
+    console.log('values.password', values.password)
+    // encrypt password
+    bcrypt.genSalt(10, function (err, salt) {
+      if (err) next(true);
+      bcrypt.hash(values.password, salt, function (err, hash) {
+        if (err) return next(err);
+        values.hashedPassword = hash;
+        delete values.password;
+        next();
+      });
+    });
+  }
   
 };
 

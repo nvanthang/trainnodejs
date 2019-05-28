@@ -18,6 +18,9 @@ module.exports.policies = {
   ***************************************************************************/
  UserController: {
   'logout': 'isAuthorized',
+  'findUser':'isAdmin',
+  'delete':'isAdmin',
+  'changepw':'isAuthorized'
 },
   // '*': true,
 
